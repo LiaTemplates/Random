@@ -1,7 +1,11 @@
 <!--
+
 import: https://raw.githubusercontent.com/fjangfaragesh/liaRandomSelector/master/import.md
+
 script: https://raw.githubusercontent.com/fjangfaragesh/liaRandomSelector/master/randomVisibility.js
+
 -->
+
 # Random Content Demo
 
 Ich habe ein kleines programm geschieben, welches die Sichtbarkeit einzelner HTML Elemente ändert.
@@ -9,27 +13,37 @@ Es ist möglich HTML Elemene zu Gruppen zusammen zu fügen und dann aus einer Gr
 
 Zum neu Würfeln der Fragen einfach an der Seite auf `Random Content Demo` und dann wieder auf `Quiz` klicken.
 
-Das ist erst mal nur ein Test, ich würde am liebsten Teile des Codes in eine seperate Datei packen, um die LiaScript datei übersichtlich zu halten, weiß aber nicht, ob das hier so einfach geht...
-
 Die Makros funktionieren auch noch nicht so, wie ich will, es ist anscheinend nicht möglich HTML Tags ein zu fügen.
 
 
 **TODO:**
-* Script sollte ein mal global geladen werden, anstatt auf der jeweiligen seite einzeln
-* Makros für `<div id="@0">` und `</div>` sollten funktionieren
+* Makro `@ranVisReload` sollte funktionieren 
+* Makros für `<div id="@0">` und `</div>` (wenn das überhaupt möglich ist)
 * code sicherer machen
-* Makro für Element zufalls Gruppen Element auswahl (gruppenId, anzahlGruppenmitglieder, wie viele sollen ausgewählt werden)
 * bessere Doumentation
+* festlegen der REPO_POSITION
+* vielleicht attribut `class` anstatt `id` verwenden
+
+## Benutzung
+
+Im Hauptkommentar muss `import: REPO_POSITION/import.md` und `script: REPO_POSITION/randomVisibility.js` eingefügt werden.
+Alle Einträge, aus denen eine bestimmte Anzahl zufällig angezeigt werden soll, müssen zwischen `<div id="gruppenId_index>` und `</div>` stehen
+(wobei gruppenId durch den Inhalt der Gruppe und Index ein laufindex beginnend mit 0 ist. Das erste Element hätte den Index 0, das zweite den Index 1 und so weiter.
+Zudem müssen sie sich alle auf einer Seite befinden. Auf der selben seite muss noch `@ranVis(gruppenId,anzahlAnElementenDerGruppe,anzahlDieAngezeigWird)` befinden (anzahlAnElementenDerGruppe und anzahlDieAngezeigWird duch die richtigen Zahlen ersetzen).
+
+Mit `@ranVisReload(gruppenId,anzahlAnElementenDerGruppe,anzahlDieAngezeigWird)` wird ein Button erzeugt. Klickt man auf diesen, werden die sichtbaren Elemente neu gewürfelt.
+
 ## Quiz
 
-@randomVisibility()
+@ranVis(quiz,7,2)
 
-<input type="button" value="reload questions" onclick="runExample()">
-(The button is broken because it was pushed too deep)
+@ranVisReload(quiz,7,2)
+(This button does not exist because it was eaten by a cat.)
 
 <div id="quiz_0">
 ** stupid question: **
 
+<!--onclick="alert('hi')"-->
 [( )] answer a
 [( )] answer b
 [(X)] Ei äm bäd in inglisch
