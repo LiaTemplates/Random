@@ -1,5 +1,6 @@
 <!--
-
+import: https://github.com/fjangfaragesh/liaRandomSelector/raw/master/import.md
+script: https://github.com/fjangfaragesh/liaRandomSelector/raw/master/randomVisibility.js
 -->
 # Random Content Demo
 
