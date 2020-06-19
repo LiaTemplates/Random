@@ -43,7 +43,6 @@ Mit `@ranVisReload(gruppenId,anzahlAnElementenDerGruppe,anzahlDieAngezeigWird)` 
 <div id="quiz_0">
 ** stupid question: **
 
-<!--onclick="alert('hi')"-->
 [( )] answer a
 [( )] answer b
 [(X)] Ei äm bäd in inglisch
