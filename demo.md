@@ -1,7 +1,5 @@
 <!--
-@showHideStart: <div id="@0">
-@showHideEnd: </div>
-@showHide: <div id="@0">@1</div>
+
 -->
 # Random Content Demo
 
@@ -164,33 +162,4 @@ function gElm(id) {
 
 </div>
 ## test zone
-### 1. makro
-
-@showHideStart(testId_0)
-
-**Hello**
-
-[( )] perfect
-[(X)] not working
-
-@showHideEnd()
-
-@showHide(testId_1,
-
-**working?**
-
-[(X)] yes
-[( )] no
-
-)
-
-
-### 2. html comment
-
-<!--style="color:blue" id="tetsId_2" onclick="i am in the paragraph"-->
-**blue...**
-[( )] I can't sea this quiz
-[(X)] Meeh
-
-[( )] This quiz is in an other paragraph
-[(X)] Meeh
+...
