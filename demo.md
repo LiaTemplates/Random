@@ -21,80 +21,8 @@ Die Makros funktionieren auch noch nicht so, wie ich will, es ist anscheinend ni
 * Makro für Element zufalls Gruppen Element auswahl (gruppenId, anzahlGruppenmitglieder, wie viele sollen ausgewählt werden)
 * bessere Doumentation
 ## Quiz
-<script>
-/* can change the visibility of html elements with id
- * 
- * you can create groups of elements, from which random elements can be displayed
- * 
- * group element id: group id followed by _ and running index
- */ 
 
-    
-// TODO checks for Illegal Arguments
- 
-//example configuration   
-const EXAMPLE_QUIZ_GROUP_ID = "quiz";
-const EXAMPLE_QUIZ_SIZE = 7;
-const EXAMPLE_NUMBER_OF_VISIBLES = 2;
-    
-window.setTimeout(runExample,1);
-function runExample() {
-//    alert("doing...");
-    showRandom(EXAMPLE_QUIZ_GROUP_ID,
-               EXAMPLE_QUIZ_SIZE,
-               EXAMPLE_NUMBER_OF_VISIBLES);
-}   
-    
-    
-//code
-const HIDDEN = "none";
-const VISIBLE = "inline";
-const GROUP_SEPERATOR = "_"; //seperates group id and index
-
-function showRandom(groupId, groupSize, numberOfVisibleMembers) {
-    let invisibles = [];
-    for (let i = 0; i < groupSize; i++) invisibles.push(i);
-    let visibles = [];
-    for (let i = 0; i < numberOfVisibleMembers; i++) {
-        let r = Math.floor(Math.random()*invisibles.length);
-        visibles.push(invisibles.splice(r, 1)[0]);
-    }
-    showGroupMembers(groupId,groupSize,visibles);
-}
-    
-function showGroupMembers(groupId, groupSize, visibleIndexs) {
-    //TODO faster solution
-    for (let i = 0; i < groupSize; i++) {
-        hideGroupElement(groupId,i);
-    }
-    for (let i of visibleIndexs) {
-        showGroupElement(groupId,i);
-    }
-}    
-
-function hideGroupElement(groupId, index){
-    hideId(""+groupId + GROUP_SEPERATOR + index)
-}
-function showGroupElement(groupId, index) {
-    showId(""+groupId + GROUP_SEPERATOR + index)
-}
-function hideId(id) {hideElm(gElm(id));}
-function showId(id) {showElm(gElm(id));}
-    
-function hideElm(elm) {
-    if (elm == undefined) return;
-    elm.style.display = HIDDEN;
-}
-function showElm(elm) {
-    if (elm == undefined) return;
-    elm.style.display = VISIBLE; 
-}
-function gElm(id) {
-    return document.getElementById(id);
-}
-
-
-</script>
+@randomVisibility()
 
 <input type="button" value="reload questions" onclick="runExample()">
 (The button is broken because it was pushed too deep)
