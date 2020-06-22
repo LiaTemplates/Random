@@ -6,7 +6,7 @@ script: https://raw.githubusercontent.com/fjangfaragesh/liaRandomSelector/master
 
 -->
 
-# Random Content Demo
+# Random Visibility Demo
 
 Ich habe ein kleines programm geschieben, welches die Sichtbarkeit einzelner HTML Elemente ändert.
 Es ist möglich HTML Elemene zu Gruppen zusammen zu fügen und dann aus einer Gruppe eine Anzahl bestimmter Elemente an zu zeigen. (Hier 2 Fragen aus 7)
