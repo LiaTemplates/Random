@@ -17,7 +17,6 @@ Die Makros funktionieren auch noch nicht so, wie ich will, es ist anscheinend ni
 
 
 **TODO:**
-* Makro `@ranVisReload` sollte funktionieren 
 * Makros für `<div id="@0">` und `</div>` (wenn das überhaupt möglich ist)
 * code sicherer machen
 * bessere Doumentation
@@ -38,7 +37,6 @@ Mit `@ranVisReload(gruppenId,anzahlAnElementenDerGruppe,anzahlDieAngezeigWird)` 
 @ranVis(quiz,7,2)
 
 @ranVisReload(quiz,7,2)
-(This button does not exist because it was eaten by a cat.)
 
 <div id="quiz_0">
 ** stupid question: **
