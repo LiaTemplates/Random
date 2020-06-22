@@ -18,7 +18,7 @@ function runExample() {
 </script>
 @end
 
-@ranVisReload: <input type="button" onclick='showRandom("@0",@1,@2) value="rerandomize @0"/>
+@ranVisReload: <input type="button" onclick='showRandom("@0",@1,@2)' value="rerandomize @0"/>
 
 -->
 
