@@ -3,7 +3,7 @@ author:   Fabian Bär & André Dietrich
 
 email:    LiaScript@web.de
 
-version:  0.0.1
+version:  0.0.2
 
 language: en
 
@@ -108,7 +108,7 @@ and change it, as you wish.
                            {{1}}
 1. Load the macros via
 
-   `import: https://github.com/liaTemplates/BiwaScheme/README.md`
+   `import: https://github.com/liaTemplates/Random/README.md`
 
 2. Copy the definitions into your Project
 
