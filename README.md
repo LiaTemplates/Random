@@ -9,6 +9,8 @@ language: en
 
 narrator: US English Male
 
+logo:     https://upload.wikimedia.org/wikipedia/commons/a/af/Who_is_the_Devil%3F%3F.jpg
+
 comment:  Import this course, if you want to define quiz-banks and randomize
           the appearance of quizzes or randomize, something else...
 
