@@ -76,6 +76,7 @@ comment:  Import this course, if you want to define quiz-banks and randomize
     quizzes.map(quiz => { quiz.style="display:none" })
     array.slice(0,@2).map(i => { random[i].style="" })
   }
+  console.log("done")
 </script>
 @end
 
